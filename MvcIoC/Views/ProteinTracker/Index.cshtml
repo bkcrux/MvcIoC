@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "ViewProtein";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ViewProtein</h2>
+<p>Use this area to provide additional information.</p>
+
+Total: @ViewBag.Total
+Goal: @ViewBag.Goal
+
+@using (Html.BeginForm("AddProtein", "ProteinTracker"))
+{
+    <input type="text" name="amount" />
+    <input type="submit" value="Add" />
+}
