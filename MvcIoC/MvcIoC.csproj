@@ -194,21 +194,26 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Bootstraper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProteinTrackerController.cs" />
+    <Compile Include="Filters\DebugFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\CustomControllerFactory.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AnalyticService.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IProteinTrackerService.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ProteinData.cs" />
     <Compile Include="Models\ProteinRepository.cs" />
     <Compile Include="Models\ProteinTrackerService.cs" />
+    <Compile Include="Models\IAnalyticsService.cs" />
+    <Compile Include="Pages\ProteinTrackerBasePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

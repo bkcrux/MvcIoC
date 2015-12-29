@@ -18,8 +18,10 @@ namespace MvcIoC
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            var factory = new CustomControllerFactory();
-            ControllerBuilder.Current.SetControllerFactory(factory);
+            Bootstraper.Intialize();
+
+            //var factory = new CustomControllerFactory();
+            //ControllerBuilder.Current.SetControllerFactory(factory);
         }
     }
 }
