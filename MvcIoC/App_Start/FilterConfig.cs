@@ -1,4 +1,6 @@
-﻿using System.Web;
+﻿using MvcIoC.Filters;
+using MvcIoC.Models;
+using System.Web;
 using System.Web.Mvc;
 
 namespace MvcIoC
@@ -8,6 +10,7 @@ namespace MvcIoC
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(DependencyResolver.Current.GetService<DebugFilter>());
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using MvcIoC.Infrastructure;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,12 +12,12 @@ namespace MvcIoC
     {
         protected void Application_Start()
         {
+            Bootstraper.Intialize();
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            Bootstraper.Intialize();
 
             //var factory = new CustomControllerFactory();
             //ControllerBuilder.Current.SetControllerFactory(factory);

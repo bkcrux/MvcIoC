@@ -203,9 +203,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\CustomControllerFactory.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnalyticService.cs" />
+    <Compile Include="Models\DebugMessageService.cs" />
+    <Compile Include="Models\IDebugMessageService.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IProteinTrackerService.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -289,6 +290,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

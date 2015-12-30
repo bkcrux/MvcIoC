@@ -36,6 +36,8 @@ namespace MvcIoC
                 WithMappings.FromMatchingInterface,
                 WithName.Default);
 
+            container.RegisterType<IProteinRepository, ProteinRepository>(new InjectionConstructor("new data source"));
+
             //container.RegisterType<IProteinTrackerService, ProteinTrackerService>();
             //container.RegisterType<IProteinRepository, ProteinRepository>();
 

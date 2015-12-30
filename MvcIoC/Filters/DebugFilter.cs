@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcIoC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,23 +18,9 @@ namespace MvcIoC.Filters
 
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            filterContext.HttpContext.Response.Write(DebugMessageService.Message);
+            filterContext.HttpContext.Response.Write(debugMessageService.Message);
              
             base.OnActionExecuted(filterContext);
-        }
-
-        public interface IDebugMessageService
-        {
-            string Message { get; }
-        }
-
-        public class DebugMessageService : IDebugMessageService
-        {
-            public string Message
-            {
-                get { return DateTime.Now.ToString(); }
-            }
-
-        }
+        }    
     }
 }
